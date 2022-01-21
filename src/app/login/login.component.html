@@ -1,0 +1,60 @@
+<div class="wrapper">
+  <div class="alert alert-danger" style="color:red;" *ngIf="erreur==1">
+    <strong>Login ou mot de passe erronés..</strong>
+  </div><br>
+  <form class="login" id="LoginForm" [formGroup]="loginForm" (ngSubmit)="onLoggedin()">
+    <p class="title">Login</p>
+    <div class="login-input-content">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          class="form-control rounded text-center"
+          placeholder="Email"
+          name="user"
+          formControlName="email"
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control rounded text-center"
+          placeholder="Password"
+          name="pass"
+          formControlName="password"
+        />
+      </div>
+
+      <button *ngIf="!loading"
+        class="btn btn-block btn-success rounded border-0 z-3"
+        value="login"
+        type="submit"
+      >
+        Connecter
+      </button>
+      <button *ngIf="loading"
+        class="btn btn-block btn-warning rounded border-0 z-3"
+        value="loading.."
+        type="button"
+      >
+        Loading..
+      </button>
+      <div>
+        <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+        <label for="rememberMe">Remember me</label>
+      </div>
+    </div>
+
+    <br />
+
+    <!-- <div class="row no-gutters">
+      <div class="col-6 text-left">
+        <a href="#" class="text-white mt-3">Forget Password ? </a>
+      </div>
+      <br />
+      <div class="col-6 text-left">
+        <a routerLink="/register" class="text-white mt-3">Register</a>
+      </div>
+    </div> -->
+  </form>
+</div>

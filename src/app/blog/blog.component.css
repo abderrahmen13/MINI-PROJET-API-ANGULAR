@@ -1,0 +1,141 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  background: rgba(darken($primary, 40%), 0.85);
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.26s ease 0.13s;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.26s ease 0.13s;
+}
+
+.btn-blog {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #68d23d;
+  color: white;
+}
+
+p {
+  margin: 1;
+}
+
+.title {
+  color: #444;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0 30px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.prod-form {
+  margin: 0 10px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.btn-blog {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 15px;
+  border-radius: 15px;
+  background-color: #68d23d;
+  color: white;
+}
+.float-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #68d23d;
+  color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease-in-out;
+}
+
+.float-btn-hide {
+  transform: rotate(135deg);
+}
+.list-blog {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 15px;
+  margin: 25px;
+}
+
+.blog {
+  width: 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 15px;
+  position: relative;
+}
+.blog h2 {
+  word-wrap: break-word;
+  font-size: 1.2rem;
+}
+
+.blog .action_edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 50%;
+  border: none;
+  background-color: rgb(16, 161, 60);
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.blog .action_delete {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 50%;
+  border: none;
+  background-color: crimson;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
